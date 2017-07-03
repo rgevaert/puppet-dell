@@ -19,7 +19,7 @@ def create_dell_warranty_cache(cache)
   begin
     # rescue in case dell.com is down
     dell_api_key     = File.read("/etc/dell_api_key") # Production API key needs to be grabbed from a file
-    uri              = URI.parse("https://api.dell.com/support/assetinfo/v4/getassetwarranty/#{servicetag}?apikey=#{dell_api_key}")
+    uri              = URI.parse("https://sandbox.api.dell.com/support/assetinfo/v4/getassetwarranty/#{servicetag}?apikey=#{dell_api_key}")
     http             = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl     = true
     # TODO : Reject SSL failures
