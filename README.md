@@ -22,3 +22,4 @@ class { 'dell':
   api_key => 'yourkeygoeshere',
 }
 ```
+
